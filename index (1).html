@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master AI Engineering in 12 Months | Saras AI Institute</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+        }
+
+        header {
+            background: white;
+            padding: 1rem 2rem;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: #f97316;
+        }
+
+        nav a {
+            margin-left: 2rem;
+            text-decoration: none;
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #f97316;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+            padding: 4rem 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #111827;
+            line-height: 1.2;
+        }
+
+        .hero-subheading {
+            font-size: 18px;
+            color: #6b7280;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .trust-stack {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .trust-icon {
+            font-size: 24px;
+            margin-right: 1rem;
+        }
+
+        .trust-item h3 {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .trust-item p {
+            font-size: 13px;
+            color: #6b7280;
+        }
+
+        /* Outcomes Section */
+        .section {
+            margin-bottom: 4rem;
+        }
+
+        .section h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: #111827;
+        }
+
+        .outcomes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .outcome-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 4px solid #f97316;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .outcome-card h3 {
+            font-size: 18px;
+            margin-bottom: 0.75rem;
+            color: #111827;
+        }
+
+        .outcome-card p {
+            font-size: 14px;
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        /* Projects Timeline */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .project-card {
+            background: #f9fafb;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .project-month {
+            font-size: 12px;
+            color: #f97316;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-card h4 {
+            font-size: 16px;
+            margin-bottom: 0.75rem;
+            color: #111827;
+        }
+
+        .project-card p {
+            font-size: 13px;
+            color: #6b7280;
+        }
+
+        /* Learning Model */
+        .learning-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature {
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 1rem;
+        }
+
+        .feature h3 {
+            font-size: 16px;
+            margin-bottom: 0.5rem;
+            color: #111827;
+        }
+
+        .feature p {
+            font-size: 13px;
+            color: #6b7280;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            border-top: 4px solid #f97316;
+        }
+
+        .testimonial-text {
+            font-size: 14px;
+            margin-bottom: 1.5rem;
+            color: #4b5563;
+            line-height: 1.6;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+
+        .author-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #e5e7eb;
+            margin-right: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            color: #f97316;
+        }
+
+        .author-info h4 {
+            font-size: 14px;
+            margin-bottom: 0.25rem;
+        }
+
+        .author-info p {
+            font-size: 12px;
+            color: #6b7280;
+        }
+
+        /* Pricing */
+        .pricing-section {
+            background: #f9fafb;
+            padding: 3rem 2rem;
+            border-radius: 8px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .price {
+            font-size: 48px;
+            font-weight: 700;
+            color: #f97316;
+            margin: 1rem 0;
+        }
+
+        .price-note {
+            font-size: 14px;
+            color: #6b7280;
+            margin-bottom: 2rem;
+        }
+
+        /* CTA Buttons */
+        .cta-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            padding: 0.75rem 2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: #f97316;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #ea580c;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #f97316;
+            border: 2px solid #f97316;
+        }
+
+        .btn-secondary:hover {
+            background: #fff7ed;
+        }
+
+        /* Sticky CTA */
+        .sticky-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            padding: 1rem 2rem;
+            border-top: 1px solid #e5e7eb;
+            box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+            text-align: center;
+            z-index: 50;
+            display: none;
+        }
+
+        .sticky-cta.show {
+            display: block;
+        }
+
+        .sticky-cta p {
+            font-size: 12px;
+            color: #6b7280;
+            margin-bottom: 0.75rem;
+        }
+
+        .sticky-cta .btn {
+            padding: 0.6rem 1.5rem;
+            font-size: 13px;
+        }
+
+        /* Form Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            overflow: auto;
+        }
+
+        .modal.show {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding-top: 2rem;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 500px;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-header h2 {
+            font-size: 20px;
+            color: #111827;
+        }
+
+        .close-btn {
+            font-size: 28px;
+            font-weight: bold;
+            color: #9ca3af;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        .close-btn:hover {
+            color: #111827;
+        }
+
+        /* Form Steps */
+        .form-step {
+            display: none;
+        }
+
+        .form-step.active {
+            display: block;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 4px;
+            background: #e5e7eb;
+            border-radius: 2px;
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: #f97316;
+            width: 20%;
+            transition: width 0.3s ease;
+        }
+
+        .step-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: #111827;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #374151;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 14px;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #f97316;
+            box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
+        }
+
+        .form-note {
+            font-size: 12px;
+            color: #6b7280;
+            margin-top: 0.5rem;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            margin-top: 0.5rem;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: auto;
+            margin-right: 0.5rem;
+        }
+
+        .checkbox-group label {
+            margin-bottom: 0;
+            font-weight: normal;
+        }
+
+        .form-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .form-buttons button {
+            flex: 1;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .btn-back {
+            background: #e5e7eb;
+            color: #111827;
+        }
+
+        .btn-back:hover {
+            background: #d1d5db;
+        }
+
+        .btn-next {
+            background: #f97316;
+            color: white;
+        }
+
+        .btn-next:hover {
+            background: #ea580c;
+        }
+
+        .success-message {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .success-message h3 {
+            color: #10b981;
+            font-size: 20px;
+            margin-bottom: 1rem;
+        }
+
+        .success-message p {
+            color: #6b7280;
+            font-size: 14px;
+            margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .section h2 {
+                font-size: 24px;
+            }
+
+            .modal-content {
+                width: 95%;
+                padding: 1.5rem;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .trust-stack {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo">SARAS AI</div>
+            <nav>
+                <a href="#programs">Programs</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Master AI Engineering in 12 Months</h1>
+                <p class="hero-subheading">Build production-grade AI systems. Stay relevant. Get hired in the AI era.</p>
+                
+                <div class="trust-stack">
+                    <div class="trust-item">
+                        <div class="trust-icon">✓</div>
+                        <div>
+                            <h3>US State-Licensed Degree</h3>
+                            <p>Not a certificate. Real accreditation.</p>
+                        </div>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon">✓</div>
+                        <div>
+                            <h3>Built with Industry Leaders</h3>
+                            <p>Microsoft, Google, Avanade advisors.</p>
+                        </div>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon">✓</div>
+                        <div>
+                            <h3>Project-First Curriculum</h3>
+                            <p>No exams. Build a portfolio.</p>
+                        </div>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon">✓</div>
+                        <div>
+                            <h3>While You Keep Your Job</h3>
+                            <p>3-5 hours per week. Flexible schedule.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta-group">
+                    <button class="btn btn-primary" onclick="openForm()">Apply Now</button>
+                    <button class="btn btn-secondary" onclick="document.getElementById('programs').scrollIntoView({behavior: 'smooth'})">Explore Programs</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Outcomes -->
+    <section class="section container">
+        <h2>Where This Leads</h2>
+        <div class="outcomes-grid">
+            <div class="outcome-card">
+                <h3>AI Engineer</h3>
+                <p>Build LLM applications, fine-tune models, deploy AI systems to production. Base: $120K-180K USD.</p>
+            </div>
+            <div class="outcome-card">
+                <h3>AI Product Manager</h3>
+                <p>Shape AI products, understand technical feasibility, lead cross-functional teams. Base: $110K-170K USD.</p>
+            </div>
+            <div class="outcome-card">
+                <h3>AI Lead / Architect</h3>
+                <p>Direct AI initiatives, design systems, mentor teams. Base: $130K-200K+ USD.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You'll Build -->
+    <section class="section container">
+        <h2>Real Projects. Real Learning.</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-month">Months 1-3</div>
+                <h4>Build an LLM Chatbot</h4>
+                <p>Learn foundations, train your first model, deploy a working chatbot with your own data.</p>
+            </div>
+            <div class="project-card">
+                <div class="project-month">Months 4-6</div>
+                <h4>Fine-Tune GPT for Your Data</h4>
+                <p>Take an open model, fine-tune it on specialized data, understand the full training pipeline.</p>
+            </div>
+            <div class="project-card">
+                <div class="project-month">Months 7-9</div>
+                <h4>Deploy AI Agents</h4>
+                <p>Build autonomous agents that make decisions, learn production deployment best practices.</p>
+            </div>
+            <div class="project-card">
+                <div class="project-month">Months 10-12</div>
+                <h4>Capstone: Your AI Product</h4>
+                <p>Ship a production AI product, add to your portfolio, get portfolio review from industry experts.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Model -->
+    <section class="section container">
+        <h2>Designed for Working Professionals</h2>
+        <div class="learning-features">
+            <div class="feature">
+                <div class="feature-icon">⏱️</div>
+                <h3>3-5 Hours/Week</h3>
+                <p>Realistic commitment. Build alongside your job.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🤝</div>
+                <h3>Live Cohort + Async</h3>
+                <p>Weekly live sessions (optional). Self-paced modules anytime.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">👨‍🏫</div>
+                <h3>1-on-1 Mentorship</h3>
+                <p>Personalized guidance from industry practitioners.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">💼</div>
+                <h3>Career Support</h3>
+                <p>Resume review, interview prep, job board access.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section container">
+        <h2>From People Like You</h2>
+        <div class="testimonials">
+            <div class="testimonial">
+                <p class="testimonial-text">"I was a mid-level backend engineer worried I'd be left behind in the AI wave. This program gave me both the skills and confidence. Now I'm leading AI initiatives at my company."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">RJ</div>
+                    <div class="author-info">
+                        <h4>Raj Patel</h4>
+                        <p>Senior AI Engineer, TechCorp | 40% salary increase</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial">
+                <p class="testimonial-text">"Flexible schedule was critical. I kept my full-time job while learning. The projects were real—I could show them to employers immediately."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">SK</div>
+                    <div class="author-info">
+                        <h4>Sarah Kim</h4>
+                        <p>AI Product Manager, Growth Startup | Career switched in 12 months</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial">
+                <p class="testimonial-text">"The capstone project became my talking point in every interview. Combined with mentorship, I landed an AI role at a tier-1 company."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">MJ</div>
+                    <div class="author-info">
+                        <h4>Michael Johnson</h4>
+                        <p>ML Engineer, FAANG | 60% salary bump</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="section container">
+        <div class="pricing-section">
+            <h2>Transparent Pricing</h2>
+            <div class="price">$6,000</div>
+            <p class="price-note">Complete 12-month program. Payment plans available. Scholarships available for eligible candidates.</p>
+            <div class="cta-group" style="justify-content: center;">
+                <button class="btn btn-primary" onclick="openForm()">Apply Now</button>
+                <button class="btn btn-secondary" onclick="alert('Talk to an advisor: hello@sarasai.org')">Talk to Advisor</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="section container">
+        <h2>Your Learning Path</h2>
+        <div class="outcomes-grid">
+            <div class="outcome-card">
+                <h3>Powers of AI</h3>
+                <p><strong>$99 | 8 weeks</strong><br>Start here if you're new to AI. Foundations course. No coding required initially.</p>
+            </div>
+            <div class="outcome-card">
+                <h3>Associate Degree</h3>
+                <p><strong>$3,500 | 12 months</strong><br>Career-switcher focused. Strong fundamentals + projects.</p>
+            </div>
+            <div class="outcome-card">
+                <h3>Bachelor Degree</h3>
+                <p><strong>$5,500 | 18 months</strong><br>Deeper expertise. Build advanced portfolio.</p>
+            </div>
+            <div class="outcome-card">
+                <h3>Master's Degree</h3>
+                <p><strong>$6,000 | 12 months</strong><br>For engineers ready to ship production AI systems.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sticky CTA -->
+    <div class="sticky-cta" id="stickyCTA">
+        <p>Ready to master AI engineering?</p>
+        <button class="btn btn-primary" onclick="openForm()">Apply Now</button>
+    </div>
+
+    <!-- Form Modal -->
+    <div id="applicationForm" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="formTitle">Step 1 of 5: Your Profile</h2>
+                <button class="close-btn" onclick="closeForm()">×</button>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+
+            <!-- Step 1: Quick Qualification -->
+            <form id="applicationFormElement">
+                <div class="form-step active" id="step1">
+                    <div class="step-title">Tell us about yourself</div>
+                    <div class="form-group">
+                        <label>Full Name *</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email *</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Country *</label>
+                        <input type="text" id="country" placeholder="e.g., United States" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone (Optional)</label>
+                        <input type="tel" id="phone">
+                    </div>
+                    <div class="form-buttons">
+                        <button type="button" class="btn btn-next" onclick="nextStep(1)">Next</button>
+                    </div>
+                </div>
+
+                <!-- Step 2: Background -->
+                <div class="form-step" id="step2">
+                    <div class="step-title">Your Background</div>
+                    <div class="form-group">
+                        <label>Current Role *</label>
+                        <input type="text" id="role" placeholder="e.g., Senior Software Engineer" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Years of Coding Experience *</label>
+                        <select id="experience" required>
+                            <option value="">Select...</option>
+                            <option value="1-3">1-3 years</option>
+                            <option value="3-7">3-7 years</option>
+                            <option value="7-10">7-10 years</option>
+                            <option value="10+">10+ years</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Primary Programming Language *</label>
+                        <input type="text" id="language" placeholder="e.g., Python" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Python Experience *</label>
+                        <select id="python" required>
+                            <option value="">Select...</option>
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Advanced</option>
+                        </select>
+                    </div>
+                    <div class="form-buttons">
+                        <button type="button" class="btn btn-back" onclick="prevStep(2)">Back</button>
+                        <button type="button" class="btn btn-next" onclick="nextStep(2)">Next</button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Documents (Optional) -->
+                <div class="form-step" id="step3">
+                    <div class="step-title">Your Portfolio (Optional)</div>
+                    <p style="font-size: 13px; color: #6b7280; margin-bottom: 1.5rem;">Upload or share links if available. You can also add these during onboarding.</p>
+                    <div class="form-group">
+                        <label>Resume Link or Upload</label>
+                        <input type="text" id="resume" placeholder="Paste link to your resume (or skip)">
+                        <p class="form-note">Google Drive, GitHub, or personal link</p>
+                    </div>
+                    <div class="form-group">
+                        <label>Portfolio / GitHub</label>
+                        <input type="text" id="portfolio" placeholder="e.g., github.com/yourname (or skip)">
+                    </div>
+                    <div class="form-group">
+                        <label>Why AI Engineering?</label>
+                        <textarea id="purpose" rows="3" placeholder="Tell us briefly why you want to learn AI engineering (optional)"></textarea>
+                    </div>
+                    <div class="form-buttons">
+                        <button type="button" class="btn btn-back" onclick="prevStep(3)">Back</button>
+                        <button type="button" class="btn btn-next" onclick="nextStep(3)">Next</button>
+                    </div>
+                </div>
+
+                <!-- Step 4: Availability & Scholarships -->
+                <div class="form-step" id="step4">
+                    <div class="step-title">Program Details</div>
+                    <div class="form-group">
+                        <label>Preferred Start Date *</label>
+                        <select id="startDate" required>
+                            <option value="">Select...</option>
+                            <option value="next-month">Next month</option>
+                            <option value="2-months">2-3 months</option>
+                            <option value="flexible">Flexible</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Hours per Week You Can Commit *</label>
+                        <select id="hours" required>
+                            <option value="">Select...</option>
+                            <option value="3-5">3-5 hours</option>
+                            <option value="5-8">5-8 hours</option>
+                            <option value="8+">8+ hours</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Do You Need Financial Aid?</label>
+                        <select id="aid">
+                            <option value="no">No</option>
+                            <option value="maybe">Maybe</option>
+                            <option value="yes">Yes</option>
+                        </select>
+                    </div>
+                    <div class="form-buttons">
+                        <button type="button" class="btn btn-back" onclick="prevStep(4)">Back</button>
+                        <button type="button" class="btn btn-next" onclick="nextStep(4)">Review</button>
+                    </div>
+                </div>
+
+                <!-- Step 5: Confirmation -->
+                <div class="form-step" id="step5">
+                    <div class="success-message">
+                        <h3>✓ Almost There</h3>
+                        <p>Review your information and confirm your application.</p>
+                        <div class="form-group" style="text-align: left; background: #f9fafb; padding: 1rem; border-radius: 6px; margin: 1.5rem 0;">
+                            <p><strong>Name:</strong> <span id="reviewName"></span></p>
+                            <p><strong>Email:</strong> <span id="reviewEmail"></span></p>
+                            <p><strong>Country:</strong> <span id="reviewCountry"></span></p>
+                            <p><strong>Experience:</strong> <span id="reviewExp"></span></p>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="agree" required>
+                            <label for="agree" style="margin-bottom: 0;">I agree to receive updates about the program</label>
+                        </div>
+                    </div>
+                    <div class="form-buttons">
+                        <button type="button" class="btn btn-back" onclick="prevStep(5)">Back</button>
+                        <button type="submit" class="btn btn-next">Submit Application</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        let currentStep = 1;
+
+        function openForm() {
+            document.getElementById('applicationForm').classList.add('show');
+        }
+
+        function closeForm() {
+            document.getElementById('applicationForm').classList.remove('show');
+        }
+
+        function nextStep(step) {
+            if (step === 5) return;
+            
+            if (validateStep(step)) {
+                document.getElementById('step' + step).classList.remove('active');
+                currentStep = step + 1;
+                document.getElementById('step' + currentStep).classList.add('active');
+                updateProgress();
+                updateFormTitle();
+                if (currentStep === 5) populateReview();
+            }
+        }
+
+        function prevStep(step) {
+            if (step === 1) return;
+            
+            document.getElementById('step' + step).classList.remove('active');
+            currentStep = step - 1;
+            document.getElementById('step' + currentStep).classList.add('active');
+            updateProgress();
+            updateFormTitle();
+        }
+
+        function validateStep(step) {
+            if (step === 1) {
+                return document.getElementById('name').value && 
+                       document.getElementById('email').value && 
+                       document.getElementById('country').value;
+            } else if (step === 2) {
+                return document.getElementById('role').value && 
+                       document.getElementById('experience').value && 
+                       document.getElementById('language').value;
+            }
+            return true;
+        }
+
+        function updateProgress() {
+            const progress = (currentStep / 5) * 100;
+            document.getElementById('progressFill').style.width = progress + '%';
+        }
+
+        function updateFormTitle() {
+            const titles = [
+                'Step 1 of 5: Your Profile',
+                'Step 2 of 5: Your Background',
+                'Step 3 of 5: Your Portfolio',
+                'Step 4 of 5: Program Details',
+                'Step 5 of 5: Confirm Application'
+            ];
+            document.getElementById('formTitle').textContent = titles[currentStep - 1];
+        }
+
+        function populateReview() {
+            document.getElementById('reviewName').textContent = document.getElementById('name').value;
+            document.getElementById('reviewEmail').textContent = document.getElementById('email').value;
+            document.getElementById('reviewCountry').textContent = document.getElementById('country').value;
+            document.getElementById('reviewExp').textContent = document.getElementById('experience').value;
+        }
+
+        // Form submission
+        document.getElementById('applicationFormElement').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simulate form submission
+            alert('✓ Application submitted successfully!\n\nNext steps:\n1. Check your email for confirmation\n2. We\'ll review your application within 48 hours\n3. Expect a call from our admissions team\n\nThank you for applying!');
+            
+            closeForm();
+            this.reset();
+            currentStep = 1;
+            updateProgress();
+            updateFormTitle();
+        });
+
+        // Sticky CTA visibility
+        window.addEventListener('scroll', function() {
+            const stickyCtaElement = document.getElementById('stickyCTA');
+            if (window.scrollY > 500) {
+                stickyCtaElement.classList.add('show');
+            } else {
+                stickyCtaElement.classList.remove('show');
+            }
+        });
+
+        // Close modal when clicking outside
+        window.addEventListener('click', function(event) {
+            const modal = document.getElementById('applicationForm');
+            if (event.target === modal) {
+                closeForm();
+            }
+        });
+    </script>
+</body>
+</html>
