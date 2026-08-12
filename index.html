@@ -142,6 +142,20 @@ h1{font-size:clamp(50px,6.5vw,88px);line-height:.94;letter-spacing:-.06em;font-w
   .advisor-image-modal img{border-radius:12px}
 }
 
+
+/* PROGRAM ADVISORS */
+.advisors-section{display:flex;align-items:center}
+.advisors-inner{display:grid;grid-template-columns:1.25fr .75fr;align-items:end;gap:40px}
+.advisors-copy h2{font-size:clamp(48px,6vw,86px);line-height:.9;letter-spacing:-.055em;max-width:760px}
+.advisors-copy h2 span{color:var(--orange)}
+.advisors-copy p{max-width:620px;color:var(--muted);font-size:18px;margin-top:20px}
+.advisor-trust{border:1px solid var(--line);border-radius:28px;background:rgba(255,255,255,.34);padding:28px;display:flex;flex-direction:column;justify-content:space-between;min-height:190px}
+.advisor-trust-label{font-size:12px;font-weight:850;letter-spacing:.08em;text-transform:uppercase;color:var(--orange)}
+.advisor-trust strong{font-size:22px;line-height:1.12;letter-spacing:-.025em;max-width:360px}
+.advisor-trust button{align-self:flex-start}
+@media(max-width:900px){.advisors-inner{grid-template-columns:1fr;gap:24px}.advisors-copy h2{font-size:54px}.advisor-trust{min-height:170px}}
+@media(max-width:560px){.advisors-section{min-height:calc(100svh - 94px)}.advisors-copy h2{font-size:45px}.advisors-copy p{font-size:16px;margin-top:16px}.advisor-trust{padding:22px;border-radius:24px}.advisor-trust strong{font-size:20px}}
+
 </style>
 </head>
 <body>
@@ -213,6 +227,22 @@ h1{font-size:clamp(50px,6.5vw,88px);line-height:.94;letter-spacing:-.06em;font-w
       <article class="card quote-card"><div><div class="quote-mark">“</div><p class="quote">Valuable exposure to real-world AI engineering practices, production-ready system design and deeper troubleshooting scenarios.</p></div><div class="person"><div class="avatar">AD</div><div><b>Ashish Dixit</b><span>Cloud Solution Architect</span></div><div class="rating"><b>4.5 ★</b><span>learner rating</span></div></div></article>
     </div>
     <div class="scroll-hint">Swipe to read more →</div>
+  </div>
+</section>
+
+
+<section class="section advisors-section" id="advisors">
+  <div class="section-inner advisors-inner">
+    <div class="advisors-copy">
+      <div class="eyebrow">Program advisors</div>
+      <h2>Built with AI leaders from <span>Microsoft &amp; Google.</span></h2>
+      <p>Get a closer view of the people advising the programme and the perspective they bring from working at the forefront of AI.</p>
+    </div>
+    <div class="advisor-trust">
+      <span class="advisor-trust-label">Meet the advisors</span>
+      <strong>See their roles, experience and messages about the programme.</strong>
+      <button class="outline" onclick="openAdvisor()">Meet the advisors →</button>
+    </div>
   </div>
 </section>
 
