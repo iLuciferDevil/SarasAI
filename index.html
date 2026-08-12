@@ -127,7 +127,7 @@ h1{font-size:clamp(50px,6.5vw,88px);line-height:.94;letter-spacing:-.06em;font-w
 .advisor-image-modal .advisor-image-note{font-size:12px;color:var(--muted);margin:12px 4px 0}
 
 /* STICKY MOBILE CTA */
-.mobile-cta{display:none;position:fixed;right:16px;bottom:16px;z-index:60;background:var(--orange);border-radius:999px;padding:0;box-shadow:0 10px 28px rgba(255,107,61,.28);opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .2s ease,transform .2s ease}.mobile-cta.visible{opacity:1;transform:translateY(0);pointer-events:auto}.mobile-cta button{border:0;background:transparent;color:#fff;border-radius:999px;padding:12px 20px;font-weight:850;font-size:13px;white-space:nowrap}
+.mobile-cta{display:none;position:fixed;left:50%;bottom:calc(14px + env(safe-area-inset-bottom));transform:translate(-50%,12px);z-index:60;background:rgba(18,21,33,.96);border:1px solid rgba(255,255,255,.08);border-radius:999px;padding:4px;box-shadow:0 10px 30px rgba(18,21,33,.22);opacity:0;pointer-events:none;transition:opacity .2s ease,transform .2s ease}.mobile-cta.visible{opacity:1;transform:translate(-50%,0);pointer-events:auto}.mobile-cta button{border:0;background:var(--orange);color:#fff;border-radius:999px;padding:10px 18px;font-weight:850;font-size:12px;white-space:nowrap;min-width:126px}
 
 @media(max-width:900px){
   html{scroll-snap-type:y mandatory}.section{min-height:calc(100svh - 94px);padding:38px 22px}.nav-links{display:none}.nav-apply{padding:10px 15px}.hero-grid,.why-grid,.price-grid,.faq-grid{grid-template-columns:1fr;gap:25px}.hero{padding-top:30px;padding-bottom:74px}.hero-art{display:none}.advisor-strip{bottom:14px;left:22px;right:22px}.advisor-strip-inner{width:100%;justify-content:space-between}.section-head,.outcome-intro{align-items:flex-start;flex-direction:column;gap:12px}.outcome-card{height:315px}.project-card{height:450px}.why-cards{grid-template-columns:1fr 1fr}.price-grid{gap:22px}.price-box{padding:25px}.faq-grid{gap:25px}.faq-intro{align-self:start}.form-wrap{grid-template-columns:1fr}.form-side{display:none}.form-main{padding:32px 24px}.modal{max-height:94svh}.advisor-modal{padding:34px 24px}.advisor-grid{grid-template-columns:1fr}.mobile-cta{display:block}.nav-apply{display:none}
@@ -150,8 +150,8 @@ h1{font-size:clamp(50px,6.5vw,88px);line-height:.94;letter-spacing:-.06em;font-w
   .advisor-image-modal .advisor-image-scroll{margin-right:-4px;padding-right:4px}
   .advisor-image-modal img{width:720px;max-width:none;border-radius:14px}
   .advisor-image-modal .advisor-image-note{padding:0 4px}
-  .mobile-cta{right:14px;bottom:14px}
-  .mobile-cta button{padding:10px 16px;font-size:12px;min-width:128px}
+  .mobile-cta{left:50%;bottom:calc(12px + env(safe-area-inset-bottom))}
+  .mobile-cta button{padding:9px 16px;font-size:12px;min-width:118px}
 }
 
 </style>
@@ -422,14 +422,22 @@ function nextForm(step){if(!validateStep(step))return;showStep(Math.min(totalSte
 function prevForm(step){showStep(Math.max(1,step-1))}
 document.getElementById('applicationForm').addEventListener('submit',function(e){e.preventDefault();if(!validateStep(5))return;this.style.display='none';document.querySelector('.save-note').style.display='none';document.getElementById('confirmation').classList.add('show')});
 const mobileCta=document.querySelector('.mobile-cta');
+const heroSection=document.querySelector('.hero');
 const applySection=document.getElementById('apply');
-const showMobileCta=()=>{if(mobileCta)mobileCta.classList.add('visible')};
+const showMobileCta=()=>{if(mobileCta && window.matchMedia('(max-width: 900px)').matches)mobileCta.classList.add('visible')};
 const hideMobileCta=()=>{if(mobileCta)mobileCta.classList.remove('visible')};
-window.addEventListener('scroll',()=>{if(window.scrollY>420)showMobileCta();else hideMobileCta()},{passive:true});
-if('IntersectionObserver' in window && applySection){
-  const applyObserver=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting)hideMobileCta();else if(window.scrollY>420)showMobileCta()})},{threshold:.12});
+if('IntersectionObserver' in window && heroSection && applySection){
+  const mobileCtaObserver=new IntersectionObserver(entries=>{
+    const heroEntry=entries.find(e=>e.target===heroSection);
+    if(heroEntry && !heroEntry.isIntersecting) showMobileCta();
+  },{threshold:0.15});
+  mobileCtaObserver.observe(heroSection);
+  const applyObserver=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{if(entry.isIntersecting)hideMobileCta();else if(heroSection.getBoundingClientRect().bottom < 0)showMobileCta()})
+  },{threshold:.12});
   applyObserver.observe(applySection);
 }
+window.addEventListener('resize',()=>{if(!window.matchMedia('(max-width: 900px)').matches)hideMobileCta()});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){document.querySelectorAll('.modal-backdrop.show').forEach(m=>closeModal(m.id))}});
 </script>
 </body>
